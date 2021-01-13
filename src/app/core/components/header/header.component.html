@@ -1,0 +1,40 @@
+<div class="header">
+  <div class="header-main p-d-flex">
+    <div>
+      <img src=""/>
+      <p>LOGO</p>
+    </div>
+    <div>
+      <input type="text" pInputText placeholder="Buscar..."/>
+
+      <div class="search-results">
+        <div class="results-item">
+          <div class="item-img">
+            <p>Icone do jogo</p>
+          </div>
+          <div class="item-info">
+            <p>Nome do Jogo</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="user-info">
+      <div *ngIf="currentUser;else askForLogin">
+
+      </div>
+      <ng-template #askForLogin>
+        <span>Já é um usuário?</span> <button>Logar</button>
+        <br>
+        <span>Se não, </span><button>Registrar</button>
+      </ng-template>
+
+    </div>
+
+  </div>
+  <div class="p-d-flex">
+    <button pButton class="btn p-button-link" label="Home" type="button"></button>
+    <button class="btn">Favoritos</button>
+  </div>
+</div>
